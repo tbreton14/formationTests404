@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<h2>Liste des recette</h2>
+
+<table class="table table-striped">
+    <thead>
+    <th>ID</th>
+    <th>Nom</th>
+    <th>Ingrédients</th>
+    </thead>
+    <tbody>
+
+    {% for record in records %}
+        <tr>
+            <td>{{ record.id }}</td>
+            <td>{{ record.name }}</td>
+            <td>
+                <ul>
+                {% for foodRecord in record.foodRecords %}
+                    <li>{{ foodRecord }}</li>
+                {% endfor %}
+                </ul>
+            </td>
+        </tr>
+
+    {% endfor %}
+    </tbody>
+</table>
+
+        <a href="{{ path('add-new-recipe') }}" type="button" class="btn btn-success btn-lg pull-right"><i class="fa fa-plus-square"></i> Ajouter une nouvelle recette</a>
+
+{% endblock %}

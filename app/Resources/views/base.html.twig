@@ -45,10 +45,16 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="{{ path('add-new-record') }}">Ajouter un nouveau rapport</a>
+                    <a href="{{ path('add-new-record') }}">Ajouter un nouvel ingrédient</a>
                 </li>
                 <li>
-                    <a href="{{ path('diary') }}">Voir tous les rapports</a>
+                    <a href="{{ path('diary') }}">Liste des ingrédients</a>
+                </li>
+                <li>
+                    <a href="{{ path('add-new-recipe') }}">Ajouter une nouvelle recette</a>
+                </li>
+                <li>
+                    <a href="{{ path('recipe') }}">Liste des recettes</a>
                 </li>
             </ul>
         </div>
@@ -67,18 +73,6 @@
             </div>
         {% endfor %}
     {% endfor %}
-
-    {% block heading %}
-        <!-- Page Heading -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">Tous les rapports
-                    <small>Tout ce qui a été mangé !</small>
-                </h1>
-            </div>
-        </div>
-        <!-- /.row -->
-    {% endblock %}
 
     {% block body %}{% endblock %}
 

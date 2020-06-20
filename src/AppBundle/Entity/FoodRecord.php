@@ -61,6 +61,12 @@ class FoodRecord
         $this->recordedAt = new \DateTime();
     }
 
+    public function __toString()
+    {
+        return $this->entitled;
+    }
+
+
     public function getId()
     {
         return $this->id;

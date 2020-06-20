@@ -2,6 +2,7 @@
 
 namespace AppBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
@@ -25,11 +26,19 @@ class RecipeRecord
     private $name;
 
     /**
-     * @var Category Catégorie de la société
-     *
-     * @ORM\ManyToOne(targetEntity="FoodRecord", inversedBy="recipeRecord")
+     * @ORM\ManyToMany(targetEntity="FoodRecord", inversedBy="recipeRecord")
+     * @ORM\JoinTable(name="food_as_recipe")
      */
     private $foodRecords;
+
+
+    /**
+     * RecipeRecord constructor.
+     */
+    public function __construct()
+    {
+        $this->foodRecords = new ArrayCollection();
+    }
 
 
     /**

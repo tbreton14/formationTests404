@@ -32,9 +32,9 @@ class DiaryController extends Controller
         return $this->render(
             'diary/list.html.twig',
             [
-                'records' => $repository->findBy(
+                'records' => $repository->findAll(
                     [
-                        'recordedAt' => new \Datetime()
+
                     ]
                 )
             ]

@@ -16,7 +16,7 @@ class FoodType extends AbstractType
         $builder
             ->add('entitled', TextType::class, ['label' => 'Ingrédient'])
             ->add('calories', IntegerType::class, ['label' => 'Calories'])
-            ->add('teneurProteine', IntegerType::class, ['label' => 'Calories'])
+            ->add('teneurProteine', IntegerType::class, ['label' => 'Teneur en protéines (g)'])
 
         ;
     }

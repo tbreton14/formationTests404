@@ -1,24 +1,31 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+
+    <h2>Liste des ingrédients</h2>
+
+    <table class="table table-striped">
+        <thead>
+            <th>ID</th>
+            <th>Ajouté le</th>
+            <th>Ingrédient</th>
+            <th>Calories</th>
+        </thead>
+    <tbody>
+
     {% for record in records %}
-    <div class="row">
-        <div class="col-md-12">
-            <h3>Ajouté le {{ record.recordedAt|date('d/m/Y') }} par {{ record.username }}</h3>
-            <h4>Consommé : {{ record.entitled }} - {{ record.calories }} Cal</h4>
+        <tr>
+            <td>{{ record.id }}</td>
+            <td>{{ record.recordedAt|date('d/m/Y') }}</td>
+            <td>{{ record.entitled }}</td>
+            <td>{{ record.calories }} Cal</td>
+        </tr>
 
-            <form action="{{ path('delete-record') }}" method="POST">
-                <input type="hidden" id="form_id" name="record_id" class="form-control" value="{{ record.id }}" />
-                <input type="hidden" name="_csrf_token" value="{{ csrf_token('delete_record') }}" />
-
-                <button type="submit" class="btn btn-danger pull-right"><i class="fa fa-window-close"></i> Supprimer</button>
-            </form>
-        </div>
-    </div>
-
-    <hr>
-    {% else %}
-        Aucune entrée dans le journal pour l'instant.
-        <a href="{{ path('add-new-record') }}" type="button" class="btn btn-success btn-lg pull-right"><i class="fa fa-plus-square"></i> Ajouter une nouvelle entrée</a>
     {% endfor %}
+        </tbody>
+        </table>
+
+
+        <a href="{{ path('add-new-record') }}" type="button" class="btn btn-success btn-lg pull-right"><i class="fa fa-plus-square"></i> Ajouter une nouvelle entrée</a>
+
 {% endblock %}

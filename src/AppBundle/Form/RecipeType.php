@@ -15,7 +15,10 @@ class RecipeType extends AbstractType
     {
         $builder
             ->add('name', TextType::class, ['label' => 'Nom de la recette'])
-            ->add('foodRecords')
+            ->add('foodRecords', null, [
+                'expanded' => true,
+                'multiple' => true
+            ])
 
         ;
     }
