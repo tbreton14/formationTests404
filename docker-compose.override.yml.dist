@@ -1,0 +1,28 @@
+version: '3'
+services:
+    # serveur web
+    app:
+        # port par lequel accéder à l'application depuis le host (localhost:3307)
+        ports:
+            - 8080:80
+
+    # base de données
+    db:
+        environment:
+            # mdp root (obligatoire)
+            MYSQL_ROOT_PASSWORD: root
+            # BDD à créer au démarrage
+            MYSQL_DATABASE: heybilly
+            # user à créer au démarrage
+            MYSQL_USER: mon_user
+            # mpd du user
+            MYSQL_PASSWORD: mon_mdp
+        # port par lequel accéder à la BDD depuis le host (localhost:3307)
+        ports:
+            - 3307:3306
+
+    # phpMyAdmin
+    myAdmin:
+        # port par lequel accéder au serveur phpMyAdmin depuis le host (localhost:8090)
+        ports:
+            - 8090:80

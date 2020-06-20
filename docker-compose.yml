@@ -1,0 +1,32 @@
+version: '3'
+services:
+    # serveur web
+    app:
+        build:
+            context: ./docker
+        image: symfony_formation
+        volumes:
+            - .:/var/www/html:rw
+        depends_on:
+            - db
+
+    # base de données
+    db:
+        image: mariadb:10.3.13-bionic
+        restart: on-failure
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+        volumes:
+            - dbdata:/var/lib/mysql
+
+    # phpMyAdmin
+    myAdmin:
+        image: phpmyadmin/phpmyadmin
+        restart: on-failure
+        ports:
+            - 8090:80
+        depends_on:
+            - db
+
+volumes:
+    dbdata:
