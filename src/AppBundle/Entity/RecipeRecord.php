@@ -40,6 +40,18 @@ class RecipeRecord
         $this->foodRecords = new ArrayCollection();
     }
 
+    public function getTotalCalories()
+    {
+
+        $totalCalories = 0;
+
+        foreach ($this->foodRecords as $foodRecord) {
+            $totalCalories += $foodRecord->getCalories();
+        }
+
+        return $totalCalories;
+    }
+
 
     /**
      * @return mixed

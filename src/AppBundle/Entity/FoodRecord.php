@@ -56,6 +56,12 @@ class FoodRecord
     public function getPercentProteineByCal() {
 
         $kcalProteine = 4.1;
+
+
+        if($this->type == "Viande") {
+            $kcalProteine = 12.3;
+        }
+
         $teneurProteineByKcal = $kcalProteine * $this->teneurProteine;
 
         return ($teneurProteineByKcal / $this->calories) * 100;

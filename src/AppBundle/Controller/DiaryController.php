@@ -85,27 +85,23 @@ class DiaryController extends Controller
     }
 
     /**
-     * @Route("/diary/record", name="delete-record")
+     * @Route("/diary/delete/{id}", name="delete-record")
+     * fs
      */
-    public function deleteRecordAction(Request $request)
+    public function deleteRecordAction(Request $request, $id)
     {
-        if (!$record = $this->getDoctrine()->getRepository('AppBundle:FoodRecord')->findOneById($request->request->get('record_id'))) {
+        if (!$record = $this->getDoctrine()->getRepository('AppBundle:FoodRecord')->findOneById($id)) {
             $this->addFlash('danger', "L'entrée du journal n'existe pas.");
 
             return $this->redirectToRoute('diary');
         }
 
-        $csrf_token = new CsrfToken('delete_record', $request->request->get('_csrf_token'));
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($record);
+        $em->flush();
 
-        if ($this->get('security.csrf.token_manager')->isTokenValid($csrf_token)) {
-            $em = $this->getDoctrine()->getManager();
-            $em->remove($record);
-            $em->flush();
+        $this->addFlash('success', "L'entrée a bien été supprimée du journal.");
 
-            $this->addFlash('success', "L'entrée a bien été supprimée du journal.");
-        } else {
-            $this->addFlash('error', 'An error occurred.');
-        }
 
         return $this->redirectToRoute('diary');
     }
