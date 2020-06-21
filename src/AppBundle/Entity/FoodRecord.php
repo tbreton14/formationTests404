@@ -30,6 +30,11 @@ class FoodRecord
     private $entitled;
 
     /**
+     * @ORM\Column(type="text")
+     */
+    private $type;
+
+    /**
      * @ORM\Column(type="integer")
      * @Assert\NotBlank(message="Veuillez indiquer un nombre de calories")
      * @Assert\Range(min=0, minMessage="Les calories ne peuvent pas être négatives.")
@@ -133,6 +138,23 @@ class FoodRecord
     {
         $this->recipeRecord = $recipeRecord;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * @param mixed $type
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+    }
+
 
 
 

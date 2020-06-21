@@ -9,15 +9,17 @@
             <th>ID</th>
             <th>Ajouté le</th>
             <th>Ingrédient</th>
+            <th>Type</th>
             <th>Calories</th>
         </thead>
     <tbody>
 
     {% for record in records %}
         <tr>
-            <td>{{ record.id }}</td>
+            <td><a href="{{ path('edit-new-record',{'id':record.id}) }}">{{ record.id }}</a></td>
             <td>{{ record.recordedAt|date('d/m/Y') }}</td>
             <td>{{ record.entitled }}</td>
+            <td>{{ record.type }}</td>
             <td>{{ record.calories }} Cal</td>
         </tr>
 

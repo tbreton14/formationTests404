@@ -13,7 +13,7 @@
 
     {% for record in records %}
         <tr>
-            <td>{{ record.id }}</td>
+            <td><a href="{{ path('edit-recipe',{'id':record.id}) }}">{{ record.id }}</a></td>
             <td>{{ record.name }}</td>
             <td>
                 <ul>

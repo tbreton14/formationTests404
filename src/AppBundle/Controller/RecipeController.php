@@ -59,4 +59,24 @@ class RecipeController extends Controller
         return $this->render('recipe/addRecipe.html.twig', ['form' => $form->createView()]);
     }
 
+    /**
+     * @Route("/recipe/edit-record/{id}", name="edit-recipe")
+     */
+    public function editRecipeAction(Request $request,$id)
+    {
+        $recipeRecord = $this->getDoctrine()->getRepository('AppBundle:RecipeRecord')->find($id);
+        $form = $this->createForm(RecipeType::class, $recipeRecord);
+
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->flush();
+
+            return $this->redirectToRoute('recipe');
+        }
+
+        return $this->render('recipe/addRecipe.html.twig', ['form' => $form->createView()]);
+    }
+
 }

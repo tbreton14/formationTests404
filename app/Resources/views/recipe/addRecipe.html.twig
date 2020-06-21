@@ -3,11 +3,17 @@
 {% block heading %}{% endblock %}
 
 {% block body %}
-    <h1>Ajouter une recette</h1>
+    {%  if form.vars.value.id is defined %}
+        <h1>Modifier une recette</h1>
+        {% set textButton = "Modifier" %}
+    {% else %}
+        <h1>Ajouter une recette</h1>
+        {% set textButton = "Ajouter" %}
+    {% endif %}
 
     {{ form_start(form) }}
         {{ form_widget(form) }}
 
-        <button type="submit" class="btn btn-success btn-lg pull-right">Ajouter</button>
+        <button type="submit" class="btn btn-success btn-lg pull-right">{{ textButton }}</button>
     {{ form_end(form) }}
 {% endblock %}

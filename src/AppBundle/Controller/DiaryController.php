@@ -65,6 +65,26 @@ class DiaryController extends Controller
     }
 
     /**
+     * @Route("/diary/edit-new-record/{id}", name="edit-new-record")
+     */
+    public function editRecordAction(Request $request, $id)
+    {
+        $foodRecord = $this->getDoctrine()->getRepository('AppBundle:FoodRecord')->find($id);
+        $form = $this->createForm(FoodType::class, $foodRecord);
+
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->flush();
+
+            return $this->redirectToRoute('diary');
+        }
+
+        return $this->render('diary/addRecord.html.twig', ['form' => $form->createView()]);
+    }
+
+    /**
      * @Route("/diary/record", name="delete-record")
      */
     public function deleteRecordAction(Request $request)
