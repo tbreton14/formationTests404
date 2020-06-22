@@ -14,15 +14,11 @@ use PHPUnit\Framework\TestCase;
 
 class FoodRecordTest extends TestCase
 {
-    public function testGetPercentProteineByCal() {
+    public function testgetPercentProteineByCal() {
 
-        $foodRecord = new FoodRecord();
-        $foodRecord->setEntitled("Tomate");
-        $foodRecord->setType("Légume");
-        $foodRecord->setCalories("25");
-        $foodRecord->setTeneurProteine("10");
+        $foodRecord = new FoodRecord("Pomme de terre", "Légume", 25, 20);
 
-        $this->assertSame(164, $foodRecord->getPercentProteineByCal());
+        $this->assertSame(floatval(328), $foodRecord->getPercentProteineByCal());
 
     }
 

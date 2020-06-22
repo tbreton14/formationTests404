@@ -53,6 +53,7 @@ class FoodRecord
     private $recipeRecord;
 
 
+
     public function getPercentProteineByCal() {
 
         $kcalProteine = 4.1;
@@ -61,13 +62,18 @@ class FoodRecord
             $kcalProteine = 12.3;
         }
 
-        $teneurProteineByKcal = $kcalProteine * $this->getTeneurProteine();
+        $teneurProteineByKcal = $kcalProteine * $this->teneurProteine;
 
-        return ($teneurProteineByKcal / $this->getCalories()) * 100;
+        return ($teneurProteineByKcal / $this->calories) * 100;
     }
 
-    public function __construct()
+    //
+    public function __construct($entitled,$type,$calories,$teneurProteine)
     {
+        $this->entitled = $entitled;
+        $this->type = $type;
+        $this->calories = $calories;
+        $this->teneurProteine = $teneurProteine;
         $this->recordedAt = new \DateTime();
     }
 
