@@ -14,7 +14,7 @@
     {% for record in records %}
         <tr>
             <td><a href="{{ path('edit-recipe',{'id':record.id}) }}">{{ record.id }}</a></td>
-            <td>{{ record.name }}</td>
+            <td>{{ record.name }} ({{ record.getTotalCalories() }})</td>
             <td>
                 <ul>
                 {% for foodRecord in record.foodRecords %}

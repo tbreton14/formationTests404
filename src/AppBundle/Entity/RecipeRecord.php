@@ -102,6 +102,19 @@ class RecipeRecord
     }
 
 
+    /**
+     * Add foodRecord
+     *
+     * @param \AppBundle\Entity\FoodRecord $foodRecord
+     *
+     * @return Media
+     */
+    public function addFoodRecord(\AppBundle\Entity\FoodRecord $foodRecord)
+    {
+        $this->foodRecords[] = $foodRecord;
+        return $this;
+    }
+
 
 
 
