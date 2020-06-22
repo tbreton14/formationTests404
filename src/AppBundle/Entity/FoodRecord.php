@@ -68,7 +68,7 @@ class FoodRecord
     }
 
     //
-    public function __construct($entitled,$type,$calories,$teneurProteine)
+    public function __construct($entitled = null,$type = null,$calories = null,$teneurProteine = null)
     {
         $this->entitled = $entitled;
         $this->type = $type;

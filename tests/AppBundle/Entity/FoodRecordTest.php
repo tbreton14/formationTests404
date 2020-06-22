@@ -22,4 +22,12 @@ class FoodRecordTest extends TestCase
 
     }
 
+    public function testgetPercentProteineByCalIfViande() {
+
+        $foodRecord = new FoodRecord("Veau", "Viande", 200, 80);
+
+        $this->assertSame(floatval(492), $foodRecord->getPercentProteineByCal());
+
+    }
+
 }
