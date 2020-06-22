@@ -15,7 +15,7 @@ use PHPUnit\Framework\TestCase;
 class GithubUserProviderTest extends TestCase
 {
     public function testLoadUserByUsernameReturningAUser() {
-        $client = $this->getMockBuilder('GuzzleHttp\Client')
+        $client = $this->getMockBuilder('GuzzleHttp\Client')->setMethods(['get'])
             ->disableOriginalConstructor()
             ->getMock();
 
