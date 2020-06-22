@@ -59,11 +59,15 @@
        <tbody>
        <tr><td><a href="Controller/DiaryController.php.html#13">AppBundle\Controller\DiaryController</a></td><td class="text-right">0%</td></tr>
        <tr><td><a href="Controller/RecipeController.php.html#15">AppBundle\Controller\RecipeController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/SecurityController.php.html#8">AppBundle\Controller\SecurityController</a></td><td class="text-right">0%</td></tr>
        <tr><td><a href="Diary/Diary.php.html#8">AppBundle\Diary\Diary</a></td><td class="text-right">0%</td></tr>
        <tr><td><a href="Form/FoodType.php.html#13">AppBundle\Form\FoodType</a></td><td class="text-right">0%</td></tr>
        <tr><td><a href="Form/RecipeType.php.html#12">AppBundle\Form\RecipeType</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Security/GithubAuthenticator.php.html#17">AppBundle\Security\GithubAuthenticator</a></td><td class="text-right">0%</td></tr>
        <tr><td><a href="Entity/FoodRecord.php.html#12">AppBundle\Entity\FoodRecord</a></td><td class="text-right">38%</td></tr>
+       <tr><td><a href="Entity/User.php.html#13">AppBundle\Entity\User</a></td><td class="text-right">41%</td></tr>
        <tr><td><a href="Entity/RecipeRecord.php.html#13">AppBundle\Entity\RecipeRecord</a></td><td class="text-right">58%</td></tr>
+       <tr><td><a href="Security/GithubUserProvider.php.html#12">AppBundle\Security\GithubUserProvider</a></td><td class="text-right">75%</td></tr>
 
        </tbody>
       </table>
@@ -82,9 +86,11 @@
        <tbody>
        <tr><td><a href="Controller/DiaryController.php.html#13">AppBundle\Controller\DiaryController</a></td><td class="text-right">110</td></tr>
        <tr><td><a href="Entity/FoodRecord.php.html#12">AppBundle\Entity\FoodRecord</a></td><td class="text-right">83</td></tr>
+       <tr><td><a href="Security/GithubAuthenticator.php.html#17">AppBundle\Security\GithubAuthenticator</a></td><td class="text-right">72</td></tr>
        <tr><td><a href="Controller/RecipeController.php.html#15">AppBundle\Controller\RecipeController</a></td><td class="text-right">56</td></tr>
        <tr><td><a href="Diary/Diary.php.html#8">AppBundle\Diary\Diary</a></td><td class="text-right">30</td></tr>
        <tr><td><a href="Entity/RecipeRecord.php.html#13">AppBundle\Entity\RecipeRecord</a></td><td class="text-right">16</td></tr>
+       <tr><td><a href="Security/GithubUserProvider.php.html#12">AppBundle\Security\GithubUserProvider</a></td><td class="text-right">6</td></tr>
 
        </tbody>
       </table>
@@ -123,38 +129,57 @@
        </thead>
        <tbody>
        <tr><td><a href="Controller/DiaryController.php.html#18"><abbr title="AppBundle\Controller\DiaryController::indexAction">indexAction</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Entity/FoodRecord.php.html#116"><abbr title="AppBundle\Entity\FoodRecord::setEntitled">setEntitled</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Form/RecipeType.php.html#14"><abbr title="AppBundle\Form\RecipeType::buildForm">buildForm</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Form/FoodType.php.html#41"><abbr title="AppBundle\Form\FoodType::configureOptions">configureOptions</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Form/FoodType.php.html#15"><abbr title="AppBundle\Form\FoodType::buildForm">buildForm</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Entity/RecipeRecord.php.html#99"><abbr title="AppBundle\Entity\RecipeRecord::setFoodRecords">setFoodRecords</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#98"><abbr title="AppBundle\Entity\User::getSalt">getSalt</abbr></a></td><td class="text-right">0%</td></tr>
        <tr><td><a href="Entity/RecipeRecord.php.html#91"><abbr title="AppBundle\Entity\RecipeRecord::getFoodRecords">getFoodRecords</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Entity/RecipeRecord.php.html#75"><abbr title="AppBundle\Entity\RecipeRecord::getName">getName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/RecipeRecord.php.html#99"><abbr title="AppBundle\Entity\RecipeRecord::setFoodRecords">setFoodRecords</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#59"><abbr title="AppBundle\Entity\User::getId">getId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#64"><abbr title="AppBundle\Entity\User::getUsername">getUsername</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#69"><abbr title="AppBundle\Entity\User::getFullname">getFullname</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#74"><abbr title="AppBundle\Entity\User::getEmail">getEmail</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#79"><abbr title="AppBundle\Entity\User::getAvatarUrl">getAvatarUrl</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#84"><abbr title="AppBundle\Entity\User::getProfileHtmlUrl">getProfileHtmlUrl</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#89"><abbr title="AppBundle\Entity\User::getRoles">getRoles</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#94"><abbr title="AppBundle\Entity\User::getPassword">getPassword</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#102"><abbr title="AppBundle\Entity\User::eraseCredentials">eraseCredentials</abbr></a></td><td class="text-right">0%</td></tr>
        <tr><td><a href="Entity/RecipeRecord.php.html#67"><abbr title="AppBundle\Entity\RecipeRecord::setId">setId</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Entity/RecipeRecord.php.html#59"><abbr title="AppBundle\Entity\RecipeRecord::getId">getId</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Entity/FoodRecord.php.html#164"><abbr title="AppBundle\Entity\FoodRecord::setType">setType</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Entity/FoodRecord.php.html#156"><abbr title="AppBundle\Entity\FoodRecord::getType">getType</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Entity/FoodRecord.php.html#148"><abbr title="AppBundle\Entity\FoodRecord::setRecipeRecord">setRecipeRecord</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Entity/FoodRecord.php.html#140"><abbr title="AppBundle\Entity\FoodRecord::getRecipeRecord">getRecipeRecord</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Entity/FoodRecord.php.html#132"><abbr title="AppBundle\Entity\FoodRecord::setTeneurProteine">setTeneurProteine</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Entity/FoodRecord.php.html#124"><abbr title="AppBundle\Entity\FoodRecord::getTeneurProteine">getTeneurProteine</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Entity/FoodRecord.php.html#111"><abbr title="AppBundle\Entity\FoodRecord::getEntitled">getEntitled</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Controller/DiaryController.php.html#26"><abbr title="AppBundle\Controller\DiaryController::listAction">listAction</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Entity/FoodRecord.php.html#106"><abbr title="AppBundle\Entity\FoodRecord::setCalories">setCalories</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Entity/FoodRecord.php.html#96"><abbr title="AppBundle\Entity\FoodRecord::setRecordedAt">setRecordedAt</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Entity/FoodRecord.php.html#91"><abbr title="AppBundle\Entity\FoodRecord::getRecordedAt">getRecordedAt</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Entity/FoodRecord.php.html#86"><abbr title="AppBundle\Entity\FoodRecord::getId">getId</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Entity/FoodRecord.php.html#80"><abbr title="AppBundle\Entity\FoodRecord::__toString">__toString</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Diary/Diary.php.html#22"><abbr title="AppBundle\Diary\Diary::getTotalCalories">getTotalCalories</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Diary/Diary.php.html#17"><abbr title="AppBundle\Diary\Diary::getDailyRemainingCalories">getDailyRemainingCalories</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Diary/Diary.php.html#12"><abbr title="AppBundle\Diary\Diary::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Controller/RecipeController.php.html#65"><abbr title="AppBundle\Controller\RecipeController::editRecipeAction">editRecipeAction</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Controller/RecipeController.php.html#42"><abbr title="AppBundle\Controller\RecipeController::addRecipeAction">addRecipeAction</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Controller/RecipeController.php.html#21"><abbr title="AppBundle\Controller\RecipeController::listAction">listAction</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Controller/DiaryController.php.html#91"><abbr title="AppBundle\Controller\DiaryController::deleteRecordAction">deleteRecordAction</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Controller/DiaryController.php.html#70"><abbr title="AppBundle\Controller\DiaryController::editRecordAction">editRecordAction</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Controller/DiaryController.php.html#47"><abbr title="AppBundle\Controller\DiaryController::addRecordAction">addRecordAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/FoodType.php.html#15"><abbr title="AppBundle\Form\FoodType::buildForm">buildForm</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/FoodType.php.html#41"><abbr title="AppBundle\Form\FoodType::configureOptions">configureOptions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/RecipeType.php.html#14"><abbr title="AppBundle\Form\RecipeType::buildForm">buildForm</abbr></a></td><td class="text-right">0%</td></tr>
        <tr><td><a href="Form/RecipeType.php.html#26"><abbr title="AppBundle\Form\RecipeType::configureOptions">configureOptions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Security/GithubAuthenticator.php.html#24"><abbr title="AppBundle\Security\GithubAuthenticator::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Security/GithubAuthenticator.php.html#33"><abbr title="AppBundle\Security\GithubAuthenticator::createToken">createToken</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Security/GithubAuthenticator.php.html#58"><abbr title="AppBundle\Security\GithubAuthenticator::authenticateToken">authenticateToken</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Security/GithubAuthenticator.php.html#71"><abbr title="AppBundle\Security\GithubAuthenticator::supportsToken">supportsToken</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Security/GithubAuthenticator.php.html#76"><abbr title="AppBundle\Security\GithubAuthenticator::onAuthenticationFailure">onAuthenticationFailure</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Security/GithubUserProvider.php.html#45"><abbr title="AppBundle\Security\GithubUserProvider::refreshUser">refreshUser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/RecipeRecord.php.html#75"><abbr title="AppBundle\Entity\RecipeRecord::getName">getName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/RecipeRecord.php.html#59"><abbr title="AppBundle\Entity\RecipeRecord::getId">getId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/DiaryController.php.html#26"><abbr title="AppBundle\Controller\DiaryController::listAction">listAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Diary/Diary.php.html#22"><abbr title="AppBundle\Diary\Diary::getTotalCalories">getTotalCalories</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/DiaryController.php.html#47"><abbr title="AppBundle\Controller\DiaryController::addRecordAction">addRecordAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/DiaryController.php.html#70"><abbr title="AppBundle\Controller\DiaryController::editRecordAction">editRecordAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/DiaryController.php.html#91"><abbr title="AppBundle\Controller\DiaryController::deleteRecordAction">deleteRecordAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/RecipeController.php.html#21"><abbr title="AppBundle\Controller\RecipeController::listAction">listAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/RecipeController.php.html#42"><abbr title="AppBundle\Controller\RecipeController::addRecipeAction">addRecipeAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/RecipeController.php.html#65"><abbr title="AppBundle\Controller\RecipeController::editRecipeAction">editRecipeAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/SecurityController.php.html#13"><abbr title="AppBundle\Controller\SecurityController::adminAuthAction">adminAuthAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/SecurityController.php.html#22"><abbr title="AppBundle\Controller\SecurityController::logoutAction">logoutAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Diary/Diary.php.html#12"><abbr title="AppBundle\Diary\Diary::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Diary/Diary.php.html#17"><abbr title="AppBundle\Diary\Diary::getDailyRemainingCalories">getDailyRemainingCalories</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/FoodRecord.php.html#82"><abbr title="AppBundle\Entity\FoodRecord::__toString">__toString</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/FoodRecord.php.html#166"><abbr title="AppBundle\Entity\FoodRecord::setType">setType</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/FoodRecord.php.html#88"><abbr title="AppBundle\Entity\FoodRecord::getId">getId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/FoodRecord.php.html#93"><abbr title="AppBundle\Entity\FoodRecord::getRecordedAt">getRecordedAt</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/FoodRecord.php.html#98"><abbr title="AppBundle\Entity\FoodRecord::setRecordedAt">setRecordedAt</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/FoodRecord.php.html#108"><abbr title="AppBundle\Entity\FoodRecord::setCalories">setCalories</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/FoodRecord.php.html#113"><abbr title="AppBundle\Entity\FoodRecord::getEntitled">getEntitled</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/FoodRecord.php.html#118"><abbr title="AppBundle\Entity\FoodRecord::setEntitled">setEntitled</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/FoodRecord.php.html#126"><abbr title="AppBundle\Entity\FoodRecord::getTeneurProteine">getTeneurProteine</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/FoodRecord.php.html#134"><abbr title="AppBundle\Entity\FoodRecord::setTeneurProteine">setTeneurProteine</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/FoodRecord.php.html#142"><abbr title="AppBundle\Entity\FoodRecord::getRecipeRecord">getRecipeRecord</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/FoodRecord.php.html#150"><abbr title="AppBundle\Entity\FoodRecord::setRecipeRecord">setRecipeRecord</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/FoodRecord.php.html#158"><abbr title="AppBundle\Entity\FoodRecord::getType">getType</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Security/GithubUserProvider.php.html#54"><abbr title="AppBundle\Security\GithubUserProvider::supportsClass">supportsClass</abbr></a></td><td class="text-right">0%</td></tr>
 
        </tbody>
       </table>
@@ -176,7 +201,10 @@
        <tr><td><a href="Controller/RecipeController.php.html#42"><abbr title="AppBundle\Controller\RecipeController::addRecipeAction">addRecipeAction</abbr></a></td><td class="text-right">12</td></tr>
        <tr><td><a href="Controller/RecipeController.php.html#65"><abbr title="AppBundle\Controller\RecipeController::editRecipeAction">editRecipeAction</abbr></a></td><td class="text-right">12</td></tr>
        <tr><td><a href="Diary/Diary.php.html#22"><abbr title="AppBundle\Diary\Diary::getTotalCalories">getTotalCalories</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Security/GithubAuthenticator.php.html#33"><abbr title="AppBundle\Security\GithubAuthenticator::createToken">createToken</abbr></a></td><td class="text-right">12</td></tr>
        <tr><td><a href="Controller/DiaryController.php.html#91"><abbr title="AppBundle\Controller\DiaryController::deleteRecordAction">deleteRecordAction</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Security/GithubAuthenticator.php.html#71"><abbr title="AppBundle\Security\GithubAuthenticator::supportsToken">supportsToken</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Security/GithubUserProvider.php.html#45"><abbr title="AppBundle\Security\GithubUserProvider::refreshUser">refreshUser</abbr></a></td><td class="text-right">6</td></tr>
 
        </tbody>
       </table>
@@ -186,7 +214,7 @@
    <footer>
     <hr/>
     <p>
-     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 7.0.10</a> using <a href="https://secure.php.net/" target="_top">PHP 7.3.13</a> with <a href="https://xdebug.org/">Xdebug 2.7.2</a> and <a href="https://phpunit.de/">PHPUnit 8.5.8</a> at Mon Jun 22 14:00:45 CEST 2020.</small>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 7.0.10</a> using <a href="https://secure.php.net/" target="_top">PHP 7.3.13</a> with <a href="https://xdebug.org/">Xdebug 2.7.2</a> and <a href="https://phpunit.de/">PHPUnit 8.5.8</a> at Mon Jun 22 16:31:37 CEST 2020.</small>
     </p>
    </footer>
   </div>
@@ -205,7 +233,7 @@ $(document).ready(function() {
       .yAxis.tickFormat(d3.format('d'));
 
     d3.select('#classCoverageDistribution svg')
-      .datum(getCoverageDistributionData([5,0,0,0,1,0,1,0,0,0,0,1], "Class Coverage"))
+      .datum(getCoverageDistributionData([7,0,0,0,1,1,1,0,1,0,0,1], "Class Coverage"))
       .transition().duration(500).call(chart);
 
     nv.utils.windowResize(chart.update);
@@ -223,7 +251,7 @@ $(document).ready(function() {
       .yAxis.tickFormat(d3.format('d'));
 
     d3.select('#methodCoverageDistribution svg')
-      .datum(getCoverageDistributionData([33,0,0,0,0,0,0,0,0,0,0,7], "Method Coverage"))
+      .datum(getCoverageDistributionData([52,0,0,0,0,0,0,0,0,0,0,10], "Method Coverage"))
       .transition().duration(500).call(chart);
 
     nv.utils.windowResize(chart.update);
@@ -273,7 +301,7 @@ $(document).ready(function() {
     chart.yAxis.axisLabel('Cyclomatic Complexity');
 
     d3.select('#classComplexity svg')
-      .datum(getComplexityData([[100,0,"<a href=\"AppBundle.php.html#7\">AppBundle\\AppBundle<\/a>"],[0,10,"<a href=\"Controller\/DiaryController.php.html#13\">AppBundle\\Controller\\DiaryController<\/a>"],[0,7,"<a href=\"Controller\/RecipeController.php.html#15\">AppBundle\\Controller\\RecipeController<\/a>"],[0,5,"<a href=\"Diary\/Diary.php.html#8\">AppBundle\\Diary\\Diary<\/a>"],[38.70967741935484,17,"<a href=\"Entity\/FoodRecord.php.html#12\">AppBundle\\Entity\\FoodRecord<\/a>"],[58.82352941176471,10,"<a href=\"Entity\/RecipeRecord.php.html#13\">AppBundle\\Entity\\RecipeRecord<\/a>"],[0,2,"<a href=\"Form\/FoodType.php.html#13\">AppBundle\\Form\\FoodType<\/a>"],[0,2,"<a href=\"Form\/RecipeType.php.html#12\">AppBundle\\Form\\RecipeType<\/a>"]], 'Class Complexity'))
+      .datum(getComplexityData([[100,0,"<a href=\"AppBundle.php.html#7\">AppBundle\\AppBundle<\/a>"],[0,10,"<a href=\"Controller\/DiaryController.php.html#13\">AppBundle\\Controller\\DiaryController<\/a>"],[0,7,"<a href=\"Controller\/RecipeController.php.html#15\">AppBundle\\Controller\\RecipeController<\/a>"],[0,2,"<a href=\"Controller\/SecurityController.php.html#8\">AppBundle\\Controller\\SecurityController<\/a>"],[0,5,"<a href=\"Diary\/Diary.php.html#8\">AppBundle\\Diary\\Diary<\/a>"],[38.70967741935484,17,"<a href=\"Entity\/FoodRecord.php.html#12\">AppBundle\\Entity\\FoodRecord<\/a>"],[58.82352941176471,10,"<a href=\"Entity\/RecipeRecord.php.html#13\">AppBundle\\Entity\\RecipeRecord<\/a>"],[41.17647058823529,11,"<a href=\"Entity\/User.php.html#13\">AppBundle\\Entity\\User<\/a>"],[0,2,"<a href=\"Form\/FoodType.php.html#13\">AppBundle\\Form\\FoodType<\/a>"],[0,2,"<a href=\"Form\/RecipeType.php.html#12\">AppBundle\\Form\\RecipeType<\/a>"],[0,8,"<a href=\"Security\/GithubAuthenticator.php.html#17\">AppBundle\\Security\\GithubAuthenticator<\/a>"],[75,6,"<a href=\"Security\/GithubUserProvider.php.html#12\">AppBundle\\Security\\GithubUserProvider<\/a>"]], 'Class Complexity'))
       .transition()
       .duration(500)
       .call(chart);
@@ -297,7 +325,7 @@ $(document).ready(function() {
     chart.yAxis.axisLabel('Method Complexity');
 
     d3.select('#methodComplexity svg')
-      .datum(getComplexityData([[0,1,"<a href=\"Controller\/DiaryController.php.html#18\">AppBundle\\Controller\\DiaryController::indexAction<\/a>"],[0,1,"<a href=\"Controller\/DiaryController.php.html#26\">AppBundle\\Controller\\DiaryController::listAction<\/a>"],[0,3,"<a href=\"Controller\/DiaryController.php.html#47\">AppBundle\\Controller\\DiaryController::addRecordAction<\/a>"],[0,3,"<a href=\"Controller\/DiaryController.php.html#70\">AppBundle\\Controller\\DiaryController::editRecordAction<\/a>"],[0,2,"<a href=\"Controller\/DiaryController.php.html#91\">AppBundle\\Controller\\DiaryController::deleteRecordAction<\/a>"],[0,1,"<a href=\"Controller\/RecipeController.php.html#21\">AppBundle\\Controller\\RecipeController::listAction<\/a>"],[0,3,"<a href=\"Controller\/RecipeController.php.html#42\">AppBundle\\Controller\\RecipeController::addRecipeAction<\/a>"],[0,3,"<a href=\"Controller\/RecipeController.php.html#65\">AppBundle\\Controller\\RecipeController::editRecipeAction<\/a>"],[0,1,"<a href=\"Diary\/Diary.php.html#12\">AppBundle\\Diary\\Diary::__construct<\/a>"],[0,1,"<a href=\"Diary\/Diary.php.html#17\">AppBundle\\Diary\\Diary::getDailyRemainingCalories<\/a>"],[0,3,"<a href=\"Diary\/Diary.php.html#22\">AppBundle\\Diary\\Diary::getTotalCalories<\/a>"],[100,2,"<a href=\"Entity\/FoodRecord.php.html#57\">AppBundle\\Entity\\FoodRecord::getPercentProteineByCal<\/a>"],[100,1,"<a href=\"Entity\/FoodRecord.php.html#71\">AppBundle\\Entity\\FoodRecord::__construct<\/a>"],[0,1,"<a href=\"Entity\/FoodRecord.php.html#80\">AppBundle\\Entity\\FoodRecord::__toString<\/a>"],[0,1,"<a href=\"Entity\/FoodRecord.php.html#86\">AppBundle\\Entity\\FoodRecord::getId<\/a>"],[0,1,"<a href=\"Entity\/FoodRecord.php.html#91\">AppBundle\\Entity\\FoodRecord::getRecordedAt<\/a>"],[0,1,"<a href=\"Entity\/FoodRecord.php.html#96\">AppBundle\\Entity\\FoodRecord::setRecordedAt<\/a>"],[100,1,"<a href=\"Entity\/FoodRecord.php.html#101\">AppBundle\\Entity\\FoodRecord::getCalories<\/a>"],[0,1,"<a href=\"Entity\/FoodRecord.php.html#106\">AppBundle\\Entity\\FoodRecord::setCalories<\/a>"],[0,1,"<a href=\"Entity\/FoodRecord.php.html#111\">AppBundle\\Entity\\FoodRecord::getEntitled<\/a>"],[0,1,"<a href=\"Entity\/FoodRecord.php.html#116\">AppBundle\\Entity\\FoodRecord::setEntitled<\/a>"],[0,1,"<a href=\"Entity\/FoodRecord.php.html#124\">AppBundle\\Entity\\FoodRecord::getTeneurProteine<\/a>"],[0,1,"<a href=\"Entity\/FoodRecord.php.html#132\">AppBundle\\Entity\\FoodRecord::setTeneurProteine<\/a>"],[0,1,"<a href=\"Entity\/FoodRecord.php.html#140\">AppBundle\\Entity\\FoodRecord::getRecipeRecord<\/a>"],[0,1,"<a href=\"Entity\/FoodRecord.php.html#148\">AppBundle\\Entity\\FoodRecord::setRecipeRecord<\/a>"],[0,1,"<a href=\"Entity\/FoodRecord.php.html#156\">AppBundle\\Entity\\FoodRecord::getType<\/a>"],[0,1,"<a href=\"Entity\/FoodRecord.php.html#164\">AppBundle\\Entity\\FoodRecord::setType<\/a>"],[100,1,"<a href=\"Entity\/RecipeRecord.php.html#38\">AppBundle\\Entity\\RecipeRecord::__construct<\/a>"],[100,2,"<a href=\"Entity\/RecipeRecord.php.html#43\">AppBundle\\Entity\\RecipeRecord::getTotalCalories<\/a>"],[0,1,"<a href=\"Entity\/RecipeRecord.php.html#59\">AppBundle\\Entity\\RecipeRecord::getId<\/a>"],[0,1,"<a href=\"Entity\/RecipeRecord.php.html#67\">AppBundle\\Entity\\RecipeRecord::setId<\/a>"],[0,1,"<a href=\"Entity\/RecipeRecord.php.html#75\">AppBundle\\Entity\\RecipeRecord::getName<\/a>"],[100,1,"<a href=\"Entity\/RecipeRecord.php.html#83\">AppBundle\\Entity\\RecipeRecord::setName<\/a>"],[0,1,"<a href=\"Entity\/RecipeRecord.php.html#91\">AppBundle\\Entity\\RecipeRecord::getFoodRecords<\/a>"],[0,1,"<a href=\"Entity\/RecipeRecord.php.html#99\">AppBundle\\Entity\\RecipeRecord::setFoodRecords<\/a>"],[100,1,"<a href=\"Entity\/RecipeRecord.php.html#112\">AppBundle\\Entity\\RecipeRecord::addFoodRecord<\/a>"],[0,1,"<a href=\"Form\/FoodType.php.html#15\">AppBundle\\Form\\FoodType::buildForm<\/a>"],[0,1,"<a href=\"Form\/FoodType.php.html#41\">AppBundle\\Form\\FoodType::configureOptions<\/a>"],[0,1,"<a href=\"Form\/RecipeType.php.html#14\">AppBundle\\Form\\RecipeType::buildForm<\/a>"],[0,1,"<a href=\"Form\/RecipeType.php.html#26\">AppBundle\\Form\\RecipeType::configureOptions<\/a>"]], 'Method Complexity'))
+      .datum(getComplexityData([[0,1,"<a href=\"Controller\/DiaryController.php.html#18\">AppBundle\\Controller\\DiaryController::indexAction<\/a>"],[0,1,"<a href=\"Controller\/DiaryController.php.html#26\">AppBundle\\Controller\\DiaryController::listAction<\/a>"],[0,3,"<a href=\"Controller\/DiaryController.php.html#47\">AppBundle\\Controller\\DiaryController::addRecordAction<\/a>"],[0,3,"<a href=\"Controller\/DiaryController.php.html#70\">AppBundle\\Controller\\DiaryController::editRecordAction<\/a>"],[0,2,"<a href=\"Controller\/DiaryController.php.html#91\">AppBundle\\Controller\\DiaryController::deleteRecordAction<\/a>"],[0,1,"<a href=\"Controller\/RecipeController.php.html#21\">AppBundle\\Controller\\RecipeController::listAction<\/a>"],[0,3,"<a href=\"Controller\/RecipeController.php.html#42\">AppBundle\\Controller\\RecipeController::addRecipeAction<\/a>"],[0,3,"<a href=\"Controller\/RecipeController.php.html#65\">AppBundle\\Controller\\RecipeController::editRecipeAction<\/a>"],[0,1,"<a href=\"Controller\/SecurityController.php.html#13\">AppBundle\\Controller\\SecurityController::adminAuthAction<\/a>"],[0,1,"<a href=\"Controller\/SecurityController.php.html#22\">AppBundle\\Controller\\SecurityController::logoutAction<\/a>"],[0,1,"<a href=\"Diary\/Diary.php.html#12\">AppBundle\\Diary\\Diary::__construct<\/a>"],[0,1,"<a href=\"Diary\/Diary.php.html#17\">AppBundle\\Diary\\Diary::getDailyRemainingCalories<\/a>"],[0,3,"<a href=\"Diary\/Diary.php.html#22\">AppBundle\\Diary\\Diary::getTotalCalories<\/a>"],[100,2,"<a href=\"Entity\/FoodRecord.php.html#57\">AppBundle\\Entity\\FoodRecord::getPercentProteineByCal<\/a>"],[100,1,"<a href=\"Entity\/FoodRecord.php.html#73\">AppBundle\\Entity\\FoodRecord::__construct<\/a>"],[0,1,"<a href=\"Entity\/FoodRecord.php.html#82\">AppBundle\\Entity\\FoodRecord::__toString<\/a>"],[0,1,"<a href=\"Entity\/FoodRecord.php.html#88\">AppBundle\\Entity\\FoodRecord::getId<\/a>"],[0,1,"<a href=\"Entity\/FoodRecord.php.html#93\">AppBundle\\Entity\\FoodRecord::getRecordedAt<\/a>"],[0,1,"<a href=\"Entity\/FoodRecord.php.html#98\">AppBundle\\Entity\\FoodRecord::setRecordedAt<\/a>"],[100,1,"<a href=\"Entity\/FoodRecord.php.html#103\">AppBundle\\Entity\\FoodRecord::getCalories<\/a>"],[0,1,"<a href=\"Entity\/FoodRecord.php.html#108\">AppBundle\\Entity\\FoodRecord::setCalories<\/a>"],[0,1,"<a href=\"Entity\/FoodRecord.php.html#113\">AppBundle\\Entity\\FoodRecord::getEntitled<\/a>"],[0,1,"<a href=\"Entity\/FoodRecord.php.html#118\">AppBundle\\Entity\\FoodRecord::setEntitled<\/a>"],[0,1,"<a href=\"Entity\/FoodRecord.php.html#126\">AppBundle\\Entity\\FoodRecord::getTeneurProteine<\/a>"],[0,1,"<a href=\"Entity\/FoodRecord.php.html#134\">AppBundle\\Entity\\FoodRecord::setTeneurProteine<\/a>"],[0,1,"<a href=\"Entity\/FoodRecord.php.html#142\">AppBundle\\Entity\\FoodRecord::getRecipeRecord<\/a>"],[0,1,"<a href=\"Entity\/FoodRecord.php.html#150\">AppBundle\\Entity\\FoodRecord::setRecipeRecord<\/a>"],[0,1,"<a href=\"Entity\/FoodRecord.php.html#158\">AppBundle\\Entity\\FoodRecord::getType<\/a>"],[0,1,"<a href=\"Entity\/FoodRecord.php.html#166\">AppBundle\\Entity\\FoodRecord::setType<\/a>"],[100,1,"<a href=\"Entity\/RecipeRecord.php.html#38\">AppBundle\\Entity\\RecipeRecord::__construct<\/a>"],[100,2,"<a href=\"Entity\/RecipeRecord.php.html#43\">AppBundle\\Entity\\RecipeRecord::getTotalCalories<\/a>"],[0,1,"<a href=\"Entity\/RecipeRecord.php.html#59\">AppBundle\\Entity\\RecipeRecord::getId<\/a>"],[0,1,"<a href=\"Entity\/RecipeRecord.php.html#67\">AppBundle\\Entity\\RecipeRecord::setId<\/a>"],[0,1,"<a href=\"Entity\/RecipeRecord.php.html#75\">AppBundle\\Entity\\RecipeRecord::getName<\/a>"],[100,1,"<a href=\"Entity\/RecipeRecord.php.html#83\">AppBundle\\Entity\\RecipeRecord::setName<\/a>"],[0,1,"<a href=\"Entity\/RecipeRecord.php.html#91\">AppBundle\\Entity\\RecipeRecord::getFoodRecords<\/a>"],[0,1,"<a href=\"Entity\/RecipeRecord.php.html#99\">AppBundle\\Entity\\RecipeRecord::setFoodRecords<\/a>"],[100,1,"<a href=\"Entity\/RecipeRecord.php.html#112\">AppBundle\\Entity\\RecipeRecord::addFoodRecord<\/a>"],[100,1,"<a href=\"Entity\/User.php.html#49\">AppBundle\\Entity\\User::__construct<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#59\">AppBundle\\Entity\\User::getId<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#64\">AppBundle\\Entity\\User::getUsername<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#69\">AppBundle\\Entity\\User::getFullname<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#74\">AppBundle\\Entity\\User::getEmail<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#79\">AppBundle\\Entity\\User::getAvatarUrl<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#84\">AppBundle\\Entity\\User::getProfileHtmlUrl<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#89\">AppBundle\\Entity\\User::getRoles<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#94\">AppBundle\\Entity\\User::getPassword<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#98\">AppBundle\\Entity\\User::getSalt<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#102\">AppBundle\\Entity\\User::eraseCredentials<\/a>"],[0,1,"<a href=\"Form\/FoodType.php.html#15\">AppBundle\\Form\\FoodType::buildForm<\/a>"],[0,1,"<a href=\"Form\/FoodType.php.html#41\">AppBundle\\Form\\FoodType::configureOptions<\/a>"],[0,1,"<a href=\"Form\/RecipeType.php.html#14\">AppBundle\\Form\\RecipeType::buildForm<\/a>"],[0,1,"<a href=\"Form\/RecipeType.php.html#26\">AppBundle\\Form\\RecipeType::configureOptions<\/a>"],[0,1,"<a href=\"Security\/GithubAuthenticator.php.html#24\">AppBundle\\Security\\GithubAuthenticator::__construct<\/a>"],[0,3,"<a href=\"Security\/GithubAuthenticator.php.html#33\">AppBundle\\Security\\GithubAuthenticator::createToken<\/a>"],[0,1,"<a href=\"Security\/GithubAuthenticator.php.html#58\">AppBundle\\Security\\GithubAuthenticator::authenticateToken<\/a>"],[0,2,"<a href=\"Security\/GithubAuthenticator.php.html#71\">AppBundle\\Security\\GithubAuthenticator::supportsToken<\/a>"],[0,1,"<a href=\"Security\/GithubAuthenticator.php.html#76\">AppBundle\\Security\\GithubAuthenticator::onAuthenticationFailure<\/a>"],[100,1,"<a href=\"Security\/GithubUserProvider.php.html#17\">AppBundle\\Security\\GithubUserProvider::__construct<\/a>"],[100,2,"<a href=\"Security\/GithubUserProvider.php.html#23\">AppBundle\\Security\\GithubUserProvider::loadUserByUsername<\/a>"],[0,2,"<a href=\"Security\/GithubUserProvider.php.html#45\">AppBundle\\Security\\GithubUserProvider::refreshUser<\/a>"],[0,1,"<a href=\"Security\/GithubUserProvider.php.html#54\">AppBundle\\Security\\GithubUserProvider::supportsClass<\/a>"]], 'Method Complexity'))
       .transition()
       .duration(500)
       .call(chart);

@@ -2,7 +2,7 @@
 <html lang="en">
  <head>
   <meta charset="UTF-8">
-  <title>Dashboard for /home/tbreton/www/formation_tests_v2/src/AppBundle/Diary</title>
+  <title>Dashboard for /home/tbreton/www/formation_tests_v2/src/AppBundle/Security</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="../_css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="../_css/nv.d3.min.css" rel="stylesheet" type="text/css">
@@ -17,7 +17,7 @@
       <nav aria-label="breadcrumb">
        <ol class="breadcrumb">
          <li class="breadcrumb-item"><a href="../index.html">/home/tbreton/www/formation_tests_v2/src/AppBundle</a></li>
-         <li class="breadcrumb-item"><a href="index.html">Diary</a></li>
+         <li class="breadcrumb-item"><a href="index.html">Security</a></li>
          <li class="breadcrumb-item active">(Dashboard)</li>
 
        </ol>
@@ -58,7 +58,8 @@
         </tr>
        </thead>
        <tbody>
-       <tr><td><a href="Diary.php.html#8">AppBundle\Diary\Diary</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="GithubAuthenticator.php.html#17">AppBundle\Security\GithubAuthenticator</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="GithubUserProvider.php.html#12">AppBundle\Security\GithubUserProvider</a></td><td class="text-right">75%</td></tr>
 
        </tbody>
       </table>
@@ -75,7 +76,8 @@
         </tr>
        </thead>
        <tbody>
-       <tr><td><a href="Diary.php.html#8">AppBundle\Diary\Diary</a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="GithubAuthenticator.php.html#17">AppBundle\Security\GithubAuthenticator</a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="GithubUserProvider.php.html#12">AppBundle\Security\GithubUserProvider</a></td><td class="text-right">6</td></tr>
 
        </tbody>
       </table>
@@ -113,9 +115,13 @@
         </tr>
        </thead>
        <tbody>
-       <tr><td><a href="Diary.php.html#12"><abbr title="AppBundle\Diary\Diary::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Diary.php.html#17"><abbr title="AppBundle\Diary\Diary::getDailyRemainingCalories">getDailyRemainingCalories</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Diary.php.html#22"><abbr title="AppBundle\Diary\Diary::getTotalCalories">getTotalCalories</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="GithubAuthenticator.php.html#24"><abbr title="AppBundle\Security\GithubAuthenticator::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="GithubAuthenticator.php.html#33"><abbr title="AppBundle\Security\GithubAuthenticator::createToken">createToken</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="GithubAuthenticator.php.html#58"><abbr title="AppBundle\Security\GithubAuthenticator::authenticateToken">authenticateToken</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="GithubAuthenticator.php.html#71"><abbr title="AppBundle\Security\GithubAuthenticator::supportsToken">supportsToken</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="GithubAuthenticator.php.html#76"><abbr title="AppBundle\Security\GithubAuthenticator::onAuthenticationFailure">onAuthenticationFailure</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="GithubUserProvider.php.html#45"><abbr title="AppBundle\Security\GithubUserProvider::refreshUser">refreshUser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="GithubUserProvider.php.html#54"><abbr title="AppBundle\Security\GithubUserProvider::supportsClass">supportsClass</abbr></a></td><td class="text-right">0%</td></tr>
 
        </tbody>
       </table>
@@ -132,7 +138,9 @@
         </tr>
        </thead>
        <tbody>
-       <tr><td><a href="Diary.php.html#22"><abbr title="AppBundle\Diary\Diary::getTotalCalories">getTotalCalories</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="GithubAuthenticator.php.html#33"><abbr title="AppBundle\Security\GithubAuthenticator::createToken">createToken</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="GithubAuthenticator.php.html#71"><abbr title="AppBundle\Security\GithubAuthenticator::supportsToken">supportsToken</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="GithubUserProvider.php.html#45"><abbr title="AppBundle\Security\GithubUserProvider::refreshUser">refreshUser</abbr></a></td><td class="text-right">6</td></tr>
 
        </tbody>
       </table>
@@ -161,7 +169,7 @@ $(document).ready(function() {
       .yAxis.tickFormat(d3.format('d'));
 
     d3.select('#classCoverageDistribution svg')
-      .datum(getCoverageDistributionData([1,0,0,0,0,0,0,0,0,0,0,0], "Class Coverage"))
+      .datum(getCoverageDistributionData([1,0,0,0,0,0,0,0,1,0,0,0], "Class Coverage"))
       .transition().duration(500).call(chart);
 
     nv.utils.windowResize(chart.update);
@@ -179,7 +187,7 @@ $(document).ready(function() {
       .yAxis.tickFormat(d3.format('d'));
 
     d3.select('#methodCoverageDistribution svg')
-      .datum(getCoverageDistributionData([3,0,0,0,0,0,0,0,0,0,0,0], "Method Coverage"))
+      .datum(getCoverageDistributionData([7,0,0,0,0,0,0,0,0,0,0,2], "Method Coverage"))
       .transition().duration(500).call(chart);
 
     nv.utils.windowResize(chart.update);
@@ -229,7 +237,7 @@ $(document).ready(function() {
     chart.yAxis.axisLabel('Cyclomatic Complexity');
 
     d3.select('#classComplexity svg')
-      .datum(getComplexityData([[0,5,"<a href=\"Diary.php.html#8\">AppBundle\\Diary\\Diary<\/a>"]], 'Class Complexity'))
+      .datum(getComplexityData([[0,8,"<a href=\"GithubAuthenticator.php.html#17\">AppBundle\\Security\\GithubAuthenticator<\/a>"],[75,6,"<a href=\"GithubUserProvider.php.html#12\">AppBundle\\Security\\GithubUserProvider<\/a>"]], 'Class Complexity'))
       .transition()
       .duration(500)
       .call(chart);
@@ -253,7 +261,7 @@ $(document).ready(function() {
     chart.yAxis.axisLabel('Method Complexity');
 
     d3.select('#methodComplexity svg')
-      .datum(getComplexityData([[0,1,"<a href=\"Diary.php.html#12\">AppBundle\\Diary\\Diary::__construct<\/a>"],[0,1,"<a href=\"Diary.php.html#17\">AppBundle\\Diary\\Diary::getDailyRemainingCalories<\/a>"],[0,3,"<a href=\"Diary.php.html#22\">AppBundle\\Diary\\Diary::getTotalCalories<\/a>"]], 'Method Complexity'))
+      .datum(getComplexityData([[0,1,"<a href=\"GithubAuthenticator.php.html#24\">AppBundle\\Security\\GithubAuthenticator::__construct<\/a>"],[0,3,"<a href=\"GithubAuthenticator.php.html#33\">AppBundle\\Security\\GithubAuthenticator::createToken<\/a>"],[0,1,"<a href=\"GithubAuthenticator.php.html#58\">AppBundle\\Security\\GithubAuthenticator::authenticateToken<\/a>"],[0,2,"<a href=\"GithubAuthenticator.php.html#71\">AppBundle\\Security\\GithubAuthenticator::supportsToken<\/a>"],[0,1,"<a href=\"GithubAuthenticator.php.html#76\">AppBundle\\Security\\GithubAuthenticator::onAuthenticationFailure<\/a>"],[100,1,"<a href=\"GithubUserProvider.php.html#17\">AppBundle\\Security\\GithubUserProvider::__construct<\/a>"],[100,2,"<a href=\"GithubUserProvider.php.html#23\">AppBundle\\Security\\GithubUserProvider::loadUserByUsername<\/a>"],[0,2,"<a href=\"GithubUserProvider.php.html#45\">AppBundle\\Security\\GithubUserProvider::refreshUser<\/a>"],[0,1,"<a href=\"GithubUserProvider.php.html#54\">AppBundle\\Security\\GithubUserProvider::supportsClass<\/a>"]], 'Method Complexity'))
       .transition()
       .duration(500)
       .call(chart);
