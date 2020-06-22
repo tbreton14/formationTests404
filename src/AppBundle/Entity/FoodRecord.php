@@ -57,14 +57,13 @@ class FoodRecord
 
         $kcalProteine = 4.1;
 
-
         if($this->type == "Viande") {
             $kcalProteine = 12.3;
         }
 
-        $teneurProteineByKcal = $kcalProteine * $this->teneurProteine;
+        $teneurProteineByKcal = $kcalProteine * $this->getTeneurProteine();
 
-        return ($teneurProteineByKcal / $this->calories) * 100;
+        return ($teneurProteineByKcal / $this->getCalories()) * 100;
     }
 
     public function __construct()

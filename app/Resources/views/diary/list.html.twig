@@ -18,7 +18,7 @@
         <tr>
             <td><a href="{{ path('edit-new-record',{'id':record.id}) }}">{{ record.id }}</a></td>
             <td>{{ record.recordedAt|date('d/m/Y') }}</td>
-            <td>{{ record.entitled }}</td>
+            <td>{{ record.entitled }} ({{ record.getPercentProteineByCal() }})</td>
             <td>{{ record.type }}</td>
             <td>{{ record.calories }} Cal</td>
         </tr>
