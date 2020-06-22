@@ -62,6 +62,8 @@ class FoodRecord
             $kcalProteine = 12.3;
         }
 
+
+
         $teneurProteineByKcal = $kcalProteine * $this->teneurProteine;
 
         return ($teneurProteineByKcal / $this->calories) * 100;

@@ -40,6 +40,7 @@ twig:
     strict_variables: '%kernel.debug%'
     globals:
         github_client_id: '%github_client_id%'
+        github_client_secret: '%github_client_secret%'
     form_themes:
         - 'bootstrap_3_layout.html.twig'
 
