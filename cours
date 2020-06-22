@@ -1,0 +1,27 @@
+Test de sécurité dans FoodRecord
+
+ /**
+     * @Route("/diary/record", name="delete-record")
+     */
+    public function deleteRecordAction(Request $request)
+    {
+        if (!$record = $this->getDoctrine()->getRepository('AppBundle:FoodRecord')->findOneById($request->request->get('record_id'))) {
+            $this->addFlash('danger', "L'entrée du journal n'existe pas.");
+
+            return $this->redirectToRoute('diary');
+        }
+
+        $csrf_token = new CsrfToken('delete_record', $request->request->get('_csrf_token'));
+
+        if ($this->get('security.csrf.token_manager')->isTokenValid($csrf_token)) {
+            $em = $this->getDoctrine()->getManager();
+            $em->remove($record);
+            $em->flush();
+
+            $this->addFlash('success', "L'entrée a bien été supprimée du journal.");
+        } else {
+            $this->addFlash('error', 'An error occurred.');
+        }
+
+        return $this->redirectToRoute('diary');
+    }
