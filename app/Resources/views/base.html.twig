@@ -44,6 +44,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
+                {% if app.user %}
                 <li>
                     <a href="{{ path('add-new-record') }}">Ajouter un nouvel ingrédient</a>
                 </li>
@@ -59,6 +60,8 @@
                 <li>
                     <a href="../../web/test-coverage">Rapport de test</a>
                 </li>
+                <li>{{ app.user.fullname }}</li>
+                {% endif %}
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -69,6 +72,13 @@
 <!-- Page Content -->
 <div class="container">
     <div class="clearfix"></div>
+
+    {% if app.user %}
+        <a href="{{ path('logout') }}" type="button" class="btn btn-danger btn-lg pull-right"><i class="fa fa-sign-out"></i> Se déconnecter</a>
+    {% else %}
+        <a href="https://github.com/login/oauth/authorize?client_id={{ github_client_id }}&redirect_uri={{ url('github_redirect_url') }}" type="button" class="btn btn-info btn-lg pull-right"><i class="fa fa-github"></i> Se connecter avec Github</a>
+    {% endif %}
+
     {% for type, flash_messages in app.session.flashBag.all %}
         {% for flash_message in flash_messages %}
             <div class="alert alert-{{ type }}" role="alert">
