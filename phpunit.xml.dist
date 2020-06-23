@@ -12,6 +12,7 @@
         <ini name="error_reporting" value="-1" />
         <server name="KERNEL_DIR" value="app/" />
         <env name="SYMFONY_DEPRECATIONS_HELPER" value="disabled" />
+        <env name="APP_URL" value="http://localhost:8080"/>
     </php>
 
     <testsuites>
