@@ -22,12 +22,17 @@ class DiaryControllerTest extends WebTestCase
 
     public function testHomepage()
     {
-        $this->client->request('GET', '/');
+        $crawler = $this->client->request('GET', '/');
 
-        static::assertEquals(
-            Response::HTTP_OK,
-            $this->client->getResponse()->getStatusCode()
-        );
+//        static::assertEquals(
+//            Response::HTTP_OK,
+//            $this->client->getResponse()->getStatusCode()
+//        );
+
+        $this->assertSame(1, $crawler->filter('h1')->count());
+
+        //$this->assertSame(1, $crawler->filterXpath('h1'));
+
     }
 
 //    public function testAddRecord()
