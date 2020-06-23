@@ -22,30 +22,29 @@ class DiaryControllerTest extends WebTestCase
 
     public function testHomepage()
     {
-        $crawler = $this->client->request('GET', '/');
+        $this->client->request('GET', '/');
 
-//        static::assertEquals(
-//            Response::HTTP_OK,
-//            $this->client->getResponse()->getStatusCode()
-//        );
-
-        $this->assertSame(1, $crawler->filter('h1')->count());
-
-        //$this->assertSame(1, $crawler->filterXpath('h1'));
-
+        static::assertEquals(
+            Response::HTTP_OK,
+            $this->client->getResponse()->getStatusCode()
+        );
     }
 
-//    public function testAddRecord()
-//    {
-//        $crawler = $this->client->request('GET', '/diary/add-new-record');
-//
-//        $form = $crawler->selectButton('Ajouter')->form();
-//        $form['food[type]'] = 'Légume';
-//        $form['food[entitled]'] = 'Poireaux';
-//        $form['food[calories]'] = 80;
-//        $crawler = $this->client->submit($form);
-//
-//        echo $this->client->getResponse()->getContent();
-//    }
+    public function testAddRecord()
+    {
+        $crawler = $this->client->request('GET', '/diary/add-new-record');
+
+        $form = $crawler->selectButton('Ajouter')->form([]);
+
+        $form['food[type]'] = 'Légume';
+        $form['food[entitled]'] = 'Poireaux';
+        $form['food[calories]'] = 80;
+        $form['food[teneurProteine]'] = 10;
+        $crawler = $this->client->submit($form);
+
+        //$this->client->followRedirect();
+
+        echo $this->client->getResponse()->getContent();
+    }
 
 }
