@@ -26,7 +26,7 @@ class RecipeRecord
     private $name;
 
     /**
-     * @ORM\ManyToMany(targetEntity="FoodRecord", inversedBy="recipeRecord")
+     * @ORM\ManyToMany(targetEntity="FoodRecord", inversedBy="recipeRecord", cascade={"persist"} )
      * @ORM\JoinTable(name="food_as_recipe")
      */
     private $foodRecords;
