@@ -20,8 +20,9 @@ class GithubUserProviderTest extends TestCase
     private $streamedResponse;
     private $response;
 
-    public function setUp() :void
+    public function setUp()
     {
+
         $this->client = $this->getMockBuilder('GuzzleHttp\Client')->setMethods(['get'])
             ->disableOriginalConstructor()
             ->getMock();
@@ -37,7 +38,7 @@ class GithubUserProviderTest extends TestCase
             ->getMock();
     }
 
-    public function tearDown(): void
+    public function tearDown()
     {
         $this->client = null;
         $this->serializer = null;

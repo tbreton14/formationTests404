@@ -16,9 +16,10 @@ security:
 
         secured_area:
             pattern: ^/
-            simple_preauth:
-                authenticator: github_authenticator
-            provider: github_user_provider
-            logout:
-                path:   /logout
-                target: /
+            anonymous: ~
+#            simple_preauth:
+#                authenticator: github_authenticator
+#            provider: github_user_provider
+#            logout:
+#                path:   /logout
+#                target: /
