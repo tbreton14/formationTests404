@@ -8,33 +8,26 @@
 
 namespace Tests\AppBundle\Controller;
 
-
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+use Symfony\Component\HTTPFoundation\Response;
 
 class DiaryControllerTest extends WebTestCase
 {
+    private $client = null;
 
-//    private $client;
-//
-//    public function setUp()
-//    {
-//        $this->client = static::createClient();
-//    }
-//
-//    public function tearDown()
-//    {
-//        $this->client = null;
-//    }
+    public function setUp()
+    {
+        $this->client = static::createClient();
+    }
 
     public function testHomepage()
     {
-        $client = static::createClient();
-        $crawler = $client->request('GET', '/');
-        $this->assertGreaterThan(
-            0,
-            $crawler->filter('html:contains("Bienvenue sur FoodDiary !")')->count()
+        $this->client->request('GET', '/');
+
+        static::assertEquals(
+            Response::HTTP_OK,
+            $this->client->getResponse()->getStatusCode()
         );
-        //$this->assertSame(1, $crawler->filter('h1')->count());
     }
 
 //    public function testAddRecord()
