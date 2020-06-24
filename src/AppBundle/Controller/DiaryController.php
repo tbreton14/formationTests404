@@ -17,6 +17,11 @@ class DiaryController extends Controller
      */
     public function indexAction()
     {
+
+        if (!$this->get('security.authorization_checker')->isGranted('IS_AUTHENTICATED_FULLY')) {
+            return $this->render('security/login.html.twig');
+        }
+
         return $this->render('diary/index.html.twig');
     }
 
