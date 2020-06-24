@@ -19,7 +19,7 @@ class DiaryController extends Controller
     {
 
         if (!$this->get('security.authorization_checker')->isGranted('IS_AUTHENTICATED_FULLY')) {
-            return $this->render('security/login.html.twig');
+            return $this->redirectToRoute('fos_user_security_login');
         }
 
         return $this->render('diary/index.html.twig');

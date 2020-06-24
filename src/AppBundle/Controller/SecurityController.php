@@ -10,28 +10,6 @@ class SecurityController extends Controller
 {
 
     /**
-     * @Route("/login", name="login")
-     */
-    public function loginAction()
-    {
-        return $this->render(
-            'securit/login.html.twig',
-            [
-                'csrf_token' => $this->get('security.csrf.token_manager')->getToken('authenticate')->getValue()
-            ]
-        );
-    }
-
-    /**
-     * @Route("/login_check", name="login_check")
-     */
-    public function loginCheckAction(Request $request)
-    {
-        
-
-    }
-
-    /**
      * @Route("/auth", name="github_redirect_url")
      */
     public function adminAuthAction()
@@ -40,10 +18,4 @@ class SecurityController extends Controller
         return $this->redirectToRoute('diary');
     }
 
-    /**
-     * @Route("/logout", name="logout")
-     */
-    public function logoutAction()
-    {
-    }
 }

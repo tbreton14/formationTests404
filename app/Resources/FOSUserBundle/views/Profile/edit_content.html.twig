@@ -1,0 +1,28 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+{{ form_start(form, { 'action': path('fos_user_profile_edit'), 'attr': { 'class': 'fos_user_profile_edit' } }) }}
+
+    <div class="row pt-3 pb-3">
+        <div class="col-12 new-trip-infos-title mb-0 d-flex align-items-center ">
+            <span class="mr-auto ml-3">Mon profil</span>
+            <a role="button" class="btn btn-warning mr-3" title="{{ 'app.button.editPassword'|trans([], 'messages') }}" href="{{ path('fos_user_change_password') }}"><i class="fas fa-key"></i></a>
+            <button type="submit" class="btn btn-success" title="{{ 'app.button.save'|trans([], 'messages') }}"><i class="fa fa-save"></i></button>
+        </div>
+        <div class="col-12 bg-custom2 px-3">
+            <div class="row">
+                <div class="col-12 col-sm-3 text-center pt-4">
+                    {% if form.vars.value.picture is not empty %}
+                        <img src="{{ asset('/uploads/pictures/' ~ form.vars.value.picture) | imagine_filter('profile_picture') }}" class="profil-picture"/>
+                    {% else %}
+                        Pas d'image de profil
+                    {% endif %}
+                </div>
+                <div class="col-12 col-sm-9 pt-4">
+                    {{ form_row(form.pictureFile) }}
+                    {{ form_widget(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+{{ form_end(form) }}
