@@ -29,6 +29,11 @@ class User implements UserInterface
     /**
      * @ORM\Column
      */
+    private $password;
+
+    /**
+     * @ORM\Column
+     */
     private $fullname;
 
     /**
@@ -46,14 +51,23 @@ class User implements UserInterface
      */
     private $profileHtmlUrl;
 
-    public function __construct($username, $fullname, $email, $avatarUrl, $profileHtmlUrl)
+    public function __construct($username, $password, $fullname, $email, $avatarUrl, $profileHtmlUrl)
     {
         $this->username = $username;
+        $this->password = $password;
         $this->fullname = $fullname;
         $this->email = $email;
         $this->avatarUrl = $avatarUrl;
         $this->profileHtmlUrl = $profileHtmlUrl;
         $this->foodRecords = new ArrayCollection();
+    }
+
+    /**
+     * @param mixed $password
+     */
+    public function setPassword($password)
+    {
+        $this->password = $password;
     }
 
     public function getId()
@@ -102,4 +116,7 @@ class User implements UserInterface
     public function eraseCredentials()
     {
     }
+
+
+
 }

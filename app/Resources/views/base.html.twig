@@ -43,6 +43,7 @@
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
             <ul class="nav navbar-nav">
                 {#{% if app.user %}#}
                 <li>
@@ -61,7 +62,7 @@
                     <a href="../../web/test-coverage">Rapport de test</a>
                 </li>
                 {#<li>{{ app.user.fullname }}</li>#}
-                {#{% endif %}#}
+                {% endif %}
             </ul>
         </div>
         <!-- /.navbar-collapse -->
